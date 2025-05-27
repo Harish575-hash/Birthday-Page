@@ -1,24 +1,12 @@
-
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
   padding: 0;
   background-image: url('./img2.png');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
   font-family: sans-serif;
   color: white;
-  overflow-x: hidden;
-  font-size: 16px;
-}
-
-a {
-  color: white;
-  font-size: 14px;
+  overflow: hidden;
 }
 
 #main {
@@ -26,105 +14,75 @@ a {
 }
 
 #wrap {
-  width: 100%;
-  max-width: 1100px;
+  position: relative;
   margin: 0 auto;
-  padding: 10px;
-  box-sizing: border-box;
+  max-width: 1100px;
+  height: 680px;
 }
 
 #text {
-  width: 100%;
-  position: relative;
-  padding: 20px;
+  width: 90%;
+  max-width: 300px;
+  position: absolute;
+  top: 80px;
+  left: 20px;
 }
 
 #code {
   display: none;
   color: rgb(196, 255, 255);
-  font-size: 16px;
-  margin-top: 70px;
-  line-height: 25px;
+  font-size: 18px;
   font-weight: bold;
+  line-height: 25px;
 }
 
 #clock-box {
-  width: 100%;
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 22px;
   text-align: center;
-  font-size: 28px;
-  margin-top: 20px;
 }
 
 #clock-box a {
-  font-size: 28px;
+  font-size: 24px;
   text-decoration: none;
-}
-
-#clock {
-  margin: 0 auto;
+  color: white;
 }
 
 #clock .digit {
-  font-size: 64px;
+  font-size: 48px;
 }
 
 #canvas {
-  width: 100%;
-  max-width: 1100px;
-  height: auto;
   display: block;
   margin: 0 auto;
+  max-width: 100%;
+  height: auto;
 }
 
 #error {
-  text-align: center;
-  margin-top: 60px;
   display: none;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .hand {
   cursor: pointer;
 }
 
-.say {
-  margin-left: 5px;
-  display: inline-block;
-  margin-bottom: 8px;
-  font-size: 18px;
-}
-
-.space {
-  margin-right: 150px;
-}
-
-#message-box {
-  margin-top: 30px;
-  text-align: center;
-  font-size: 25px;
-  font-family: monospace;
-}
-
-/* Mobile-specific styles */
 @media (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
-
-  .say {
+  #code {
     font-size: 16px;
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  #clock-box {
-    font-size: 18px;
   }
 
   #clock .digit {
-    font-size: 40px;
+    font-size: 36px;
   }
 
-  #message-box {
+  #clock-box {
     font-size: 18px;
   }
 }
